@@ -41,26 +41,44 @@ class MediaPlayer {
   stopTheSong = (id) => this.tracksPlaying.stop(id);
 
   playTheNextSong = () => {
-    if (this.tracker < songs.length - 1) {
-      this.tracker++;
-      this.stopTheSong(this.getID);
-      this.path = songs[this.tracker][0];
-      this.artist = songs[this.tracker][1];
-      this.playing = 0;
-      this.getID = undefined;
-      this.playTheSong();
+    if (!this.playing) {
+      if (this.tracker < songs.length - 1) {
+        this.tracker++;
+        this.path = songs[this.tracker][0];
+        this.artist = songs[this.tracker][1];
+        this.playing = 0;
+        this.playTheSong();
+      }
+    } else {
+      if (this.tracker < songs.length - 1) {
+        this.tracker++;
+        this.path = songs[this.tracker][0];
+        this.artist = songs[this.tracker][1];
+        this.playing = 0;
+        this.playTheSong();
+      }
     }
   };
 
   playThePrevSong = () => {
-    if (this.tracker > 0) {
-      this.tracker--;
-      this.stopTheSong(this.getID);
-      this.path = songs[this.tracker][0];
-      this.artist = songs[this.tracker][1];
-      this.playing = 0;
-      this.getID = undefined;
-      this.playTheSong();
+    if (!this.playing) {
+      if (this.tracker > 0) {
+        this.tracker--;
+        this.path = songs[this.tracker][0];
+        this.artist = songs[this.tracker][1];
+        this.playing = 0;
+        this.playTheSong();
+      }
+    } else {
+      if (this.tracker > 0) {
+        this.tracker--;
+        this.stopTheSong(this.getID);
+        this.path = songs[this.tracker][0];
+        this.artist = songs[this.tracker][1];
+        this.playing = 0;
+        this.getID = undefined;
+        this.playTheSong();
+      }
     }
   };
 
