@@ -109,7 +109,6 @@ body {
   grid-gap: 4px;
   width: 100%;
   height: 95px;
-  /* background-color: violet; */
 }
 
 .artist {
@@ -126,6 +125,9 @@ body {
   text-align: center;
   font-size: 18px;
   font-family: Nunito SemiBold;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .music-disk {

@@ -16,19 +16,29 @@ const play_prev = document.querySelector(".prev");
 const play_next = document.querySelector(".next");
 const song_name = document.querySelector(".name");
 const artist = document.querySelector(".artist");
+const playButton = document.querySelector(".play-icon");
+const atBeginning = `
+  <p>
+  <br/>  
+    Song: ${songs[0][0].replace(".mp3", "").replace(/-/g, " ")}
+    <br/><br/>
+  </p>`;
 
 play_pause.addEventListener("click", () => media_player.playTheSong());
-
 play_prev.addEventListener("click", () => media_player.playThePrevSong());
-
 play_next.addEventListener("click", () => media_player.playTheNextSong());
+song_name.innerHTML = atBeginning;
+artist.innerHTML = `
+    <p>
+      Artist: ${songs[0][1]}
+    </p>
+  `;
 
-song_name.textContent = `Unknown`;
 const displayName = (name, duration, artists) => {
   song_name.innerHTML = `
   <p>
   <br/>  
-    Song: ${name.replace(".mp3", "").replace("-", " ")}
+    Song: ${name.replace(".mp3", "").replace(/-/g, " ")}
     <br/><br/>
     Duration: ${Math.ceil(duration / 60)}:00 min
   </p>`;
