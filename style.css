@@ -1,7 +1,7 @@
 body {
   background-image: url("wallImg.jpg");
-  background-size: cover;
   background-repeat: repeat;
+  background-size: cover;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

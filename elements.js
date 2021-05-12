@@ -1,14 +1,13 @@
 let songs = [
-  ["Boyfriend.mp3", "Justin Bieber"],
-  ["Catching-Feelings.mp3", "Justin Bieber"],
-  ["Cold-Water.mp3", "Justin Bieber"],
-  ["Forever.mp3", "Justin Bieber"],
-  ["Freeze.mp3", "T Pain"],
-  ["I-Would.mp3", "Justin Bieber"],
-  ["Out-Of-Town-Girl.mp3", "Justin Bieber"],
-  ["Take-You.mp3", "Justin Bieber"],
-  ["What-Do-You-Mean.mp3", "Justin Bieber"],
-  ["Yellow-Raincoat.mp3", "Justin Bieber"],
+  ["Cozy-Sofa.mp3", "Ilomilo"],
+  ["Goodnight-Fire-Flies.mp3", "Ilomilo"],
+  ["Me-and-My-Paper-Plane.mp3", "Ilomilo"],
+  ["Music-School.mp3", "Ilomilo"],
+  ["Once-Upon.mp3", "Ilomilo"],
+  ["RedGreen-and-Blue-Doodles.mp3", "Ilomilo"],
+  ["Shuffle-Theme.mp3", "Ilomilo"],
+  ["Theme-of-Ilomilo.mp3", "Ilomilo"],
+  ["Twinkly-Ladybugs.mp3", "Ilomilo"],
 ];
 
 const play_pause = document.querySelector(".play");
@@ -40,7 +39,7 @@ const displayName = (name, duration, artists) => {
   <br/>  
     Song: ${name.replace(".mp3", "").replace(/-/g, " ")}
     <br/><br/>
-    Duration: ${Math.ceil(duration / 60)}:00 min
+    
   </p>`;
 
   artist.innerHTML = `
@@ -49,3 +48,5 @@ const displayName = (name, duration, artists) => {
     </p>
   `;
 };
+
+// Duration: ${Math.ceil(duration / 60)}:00 min
